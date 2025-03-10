@@ -1,0 +1,64 @@
+Time : 2025-03-10 15:14:30
+
+USER DETAILS : anmkudr:x:1000:1000:,,,:/home/anmkudr:/bin/bash
+
+REPO : /home/anmkudr/LINUX_Course_Project/Work/Q1
+
+GithubUrl: https://github.com/amkudr/linux_project.git
+
+VERSIONID : 24.04
+
+--------------------------------------------------
+.
+├── BACKUPS
+├── CODE
+│   ├── plant.py
+│   └── py1.py
+├── DATA
+│   ├── FIle_1.txt
+│   ├── File_2.txt
+│   ├── img1.jpg
+│   ├── img2.jpg
+│   ├── img3.jpg
+│   └── plants.csv
+├── DOWNLOADS
+│   ├── FIle_1.txt
+│   ├── File_2.txt
+│   ├── img1.jpg
+│   ├── img2.jpg
+│   ├── img3.jpg
+│   ├── plant.py
+│   ├── plants.csv
+│   └── py1.py
+└── Work
+    ├── Q1
+    │   └── q1_output.txt
+    ├── Q2
+    ├── Q3
+    └── Q4
+
+10 directories, 17 files
+--------------------------------------------------
+
+/home/anmkudr/.vscode-server/extensions/ms-python.debugpy-2025.4.0-linux-x64/bundled/libs/debugpy/_vendored/pydevd/pydevd_attach_to_process/linux_and_mac/compile_mac.sh
+/home/anmkudr/.vscode-server/extensions/ms-python.debugpy-2025.4.0-linux-x64/bundled/libs/debugpy/_vendored/pydevd/pydevd_attach_to_process/linux_and_mac/compile_linux.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/out/vs/base/node/ps.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/out/vs/base/node/cpuUsage.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/node_modules/jschardet/scripts/show-size-changes.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/node_modules/jschardet/scripts/run-workflow.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/ms-vscode.js-debug/src/targets/node/terminateProcess.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/git/dist/git-editor.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/git/dist/askpass.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/git/dist/ssh-askpass-empty.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/git/dist/askpass-empty.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/git/dist/ssh-askpass.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/git/dist/git-editor-empty.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/terminal-suggest/scripts/clone-fig.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/terminal-suggest/scripts/update-specs.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/terminal-suggest/fixtures/shell-parser/multipleStatements/input.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/terminal-suggest/fixtures/shell-parser/basic/input.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/terminal-suggest/fixtures/shell-parser/primaryExpressions/input.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/extensions/terminal-suggest/fixtures/shell-parser/variables/input.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/bin/helpers/browser.sh
+/home/anmkudr/.vscode-server/bin/6609ac3d66f4eade5cf376d1cb76f13985724bcb/bin/helpers/check-requirements.sh
