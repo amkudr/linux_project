@@ -1,0 +1,37 @@
+    1  cp ./DOWNLOADS/plant.py ./Work/Q2/
+    2  python3 ./Work/Q2/plant.py 
+    3  mkdir ./Work/Q2/Diagrams_1
+    4  mv Rose* ./Work/Q2/Diagrams_1/
+    5  tar -czvf BACKUPS/diagrams_backup_$(date +"%Y-%m-%d_%H-%M-%S").tar.gz -C ./Work/Q2/Diagrams_1 .
+    6  git add .
+    7  git commit -m "Q2 Part 1"
+    8  git checkout main
+    9  git merge BR_Q2
+   10  git add .
+   11  git commit -m "Changed History Q1"
+   12  git push origin
+   13  git chekout BR_Q2
+   14  git checkout BR_Q2
+   15  git merge main
+   16  python3 plant_plots.py --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   17  echo -e "matplotlib\nargparse" > requirements.txt
+   18  sudo pip uninstall -r requirements.txt -y
+   19  sudo uninstall -r requirements.txt -y
+   20  sudo apt uninstall -r requirements.txt -y
+   21  sudo apt uninstall requirements.txt -y
+   22  sudo apt remove matplotlib -y
+   23  sudo apt remove argparse -y
+   24  pip3 install -r requirements.txt
+   25  python3 -m venv .venv
+   26  sudo apt install python3-venv
+   27  touch .gitignore
+   28  echo ".venv" >> .gitignore
+   29  python3 -m venv .venv
+   30  source .venv/bin/activate
+   31  pip install -r requirements.txt
+   32  deactivate
+   33  mdkdir ./Work/Q2/Diagrams_2/ && mv Rose* ./Work/Q2/Diagrams_2/
+   34  mkdir ./Work/Q2/Diagrams_2/ && mv Rose* ./Work/Q2/Diagrams_2/
+   35  tar -czvf BACKUPS/diagrams2_backup_$(date +"%Y-%m-%d_%H-%M-%S").tar.gz -C ./Work/Q2/Diagrams_2 .
+   36  history
+   37  history >> Work/Q2/history.txt 
