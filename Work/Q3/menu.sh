@@ -2,6 +2,33 @@
 
 CSV_FILE="plants.csv"
 
+normalize_columns() {
+    file="$1"
+    temp_file=$(mktemp)
+
+    while IFS=, read -r plant heights leaf_counts dry_weights; do
+        heights=($(echo "$heights" | tr -d '"' | tr ' ' '\n'))
+        leaf_counts=($(echo "$leaf_counts" | tr -d '"' | tr ' ' '\n'))
+        dry_weights=($(echo "$dry_weights" | tr -d '"' | tr ' ' '\n'))
+
+        max_length=${#heights[@]}
+        (( ${#leaf_counts[@]} > max_length )) && max_length=${#leaf_counts[@]}
+        (( ${#dry_weights[@]} > max_length )) && max_length=${#dry_weights[@]}
+
+        while [ ${#heights[@]} -lt $max_length ]; do heights+=("${heights[-1]}"); done
+        while [ ${#leaf_counts[@]} -lt $max_length ]; do leaf_counts+=("${leaf_counts[-1]}"); done
+        while [ ${#dry_weights[@]} -lt $max_length ]; do dry_weights+=("${dry_weights[-1]}"); done
+
+        height_fixed=$(IFS=" "; echo "${heights[*]}")
+        leaf_count_fixed=$(IFS=" "; echo "${leaf_counts[*]}")
+        dry_weight_fixed=$(IFS=" "; echo "${dry_weights[*]}")
+
+        echo "$plant,\"$height_fixed\",\"$leaf_count_fixed\",\"$dry_weight_fixed\"" >> "$temp_file"
+    done < "$file"
+
+    mv "$temp_file" "$file"
+}
+
 create_csv() {
     echo ""
     read -p "Enter new CSV filename: " input_file
@@ -53,37 +80,10 @@ add_new_plant() {
     dry_weight_fixed=$(IFS=" "; echo "${dry_weights_arr[*]}")
 
     echo "$plant,\"$height_fixed\",\"$leaf_count_fixed\",\"$dry_weight_fixed\"" >> "$CSV_FILE"
+    normalize_columns "$CSV_FILE"
     echo "New plant added: $plant"
     echo ""
 }
-
-
-run_python_script() {
-    if [ ! -f "$CSV_FILE" ]; then
-        echo "CSV file not found. Create or select a file first."
-        return
-    fi
-
-    read -p "Enter plant name: " plant
-
-    plant_data=$(grep "^$plant," "$CSV_FILE")
-
-    if [ -z "$plant_data" ]; then
-        echo "Plant not found in CSV."
-        return
-    fi
-
-    height=$(echo "$plant_data" | awk -F',' '{print $2}' | tr -d '"')
-    leaf_count=$(echo "$plant_data" | awk -F',' '{print $3}' | tr -d '"')
-    dry_weight=$(echo "$plant_data" | awk -F',' '{print $4}' | tr -d '"')
-
-   python3 ~/linux_project/plant_plots.py --plant "$plant" --height $height --leaf_count $leaf_count --dry_weight $dry_weight
-
-
-
-}
-
-
 
 update_plant() {
     echo ""
@@ -93,6 +93,7 @@ update_plant() {
         read -p "Enter new leaf counts (space-separated): " new_leaf_count
         read -p "Enter new dry weights (space-separated): " new_dry_weight
         sed -i "/^$plant,/c\\$plant,\"$new_height\",\"$new_leaf_count\",\"$new_dry_weight\"" "$CSV_FILE"
+        normalize_columns "$CSV_FILE"
         echo "Updated plant: $plant"
     else
         echo "Plant not found in CSV."
@@ -113,6 +114,28 @@ delete_row() {
         echo "Deleted plant: $plant"
     fi
     echo ""
+}
+
+run_python_script() {
+    if [ ! -f "$CSV_FILE" ]; then
+        echo "CSV file not found. Create or select a file first."
+        return
+    fi
+
+    read -p "Enter plant name: " plant
+
+    plant_data=$(grep "^$plant," "$CSV_FILE")
+
+    if [ -z "$plant_data" ]; then
+        echo "Plant not found in CSV."
+        return
+    fi
+
+    height=$(echo "$plant_data" | awk -F',' '{print $2}' | tr -d '"')
+    leaf_count=$(echo "$plant_data" | awk -F',' '{print $3}' | tr -d '"')
+    dry_weight=$(echo "$plant_data" | awk -F',' '{print $4}' | tr -d '"')
+
+    python3 ~/linux_project/plant_plots.py --plant "$plant" --height $height --leaf_count $leaf_count --dry_weight $dry_weight
 }
 
 print_highest_leaf_avg() {
