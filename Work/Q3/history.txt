@@ -1,0 +1,34 @@
+1  git checkout -b BR_Q3
+    2  touch menu.sh
+    3  nano menu.sh
+    4  git checkout -b BR_CSV
+    5  history
+    6  touch csv_script.sh
+    7  rm csv_script.sh
+    8  ./menu.sh 
+    9  chmod +x menu.sh
+   10  ./menu.sh 
+   11  grep -n '"' menu.sh
+   12  ./menu.sh 
+   13  chmod +x menu.sh
+   14  ./menu.sh
+   15  chmod +x menu.sh
+   16  ./menu.sh
+   17  cd ~/linux_project
+   18  git status
+   19  git add .
+   20  git commit -m "Saving local changes before pull"
+   21  git pull origin main
+   22  git branch
+   23  git checkout main
+   24  git pull origin main
+   25  git checkout BR_CSV
+   26  git fetch
+   27  git checkout main
+   28  git checkout BR_CSV
+   29  chmod +x menu.sh
+   30  ./menu.sh
+   31  cd ~/linux_project/Work/Q3
+   32  chmod +x menu.sh
+   33  ./menu.sh
+   34  history

@@ -57,15 +57,33 @@ add_new_plant() {
     echo ""
 }
 
+
 run_python_script() {
-    echo ""
-    if [ -f "$CSV_FILE" ]; then
-        python3 analyze_plants.py "$CSV_FILE"
-    else
+    if [ ! -f "$CSV_FILE" ]; then
         echo "CSV file not found. Create or select a file first."
+        return
     fi
-    echo ""
+
+    read -p "Enter plant name: " plant
+
+    plant_data=$(grep "^$plant," "$CSV_FILE")
+
+    if [ -z "$plant_data" ]; then
+        echo "Plant not found in CSV."
+        return
+    fi
+
+    height=$(echo "$plant_data" | awk -F',' '{print $2}' | tr -d '"')
+    leaf_count=$(echo "$plant_data" | awk -F',' '{print $3}' | tr -d '"')
+    dry_weight=$(echo "$plant_data" | awk -F',' '{print $4}' | tr -d '"')
+
+   python3 ~/linux_project/plant_plots.py --plant "$plant" --height $height --leaf_count $leaf_count --dry_weight $dry_weight
+
+
+
 }
+
+
 
 update_plant() {
     echo ""
