@@ -34,9 +34,38 @@ create_csv() {
     read -p "Enter new CSV filename: " input_file
     CSV_FILE=${input_file:-plants.csv}
     touch "$CSV_FILE"
+    
+    echo "Plant,Height,Leaf Count,Dry Weight" > "$CSV_FILE"
+
+    while true; do
+        read -p "Enter plant name (or press Enter to finish): " plant
+        [[ -z "$plant" ]] && break
+
+        read -p "Enter heights (space-separated): " -a heights_arr
+        read -p "Enter leaf counts (space-separated): " -a leaf_counts_arr
+        read -p "Enter dry weights (space-separated): " -a dry_weights_arr
+
+        # נורמליזציה של הנתונים כדי לוודא שכולם באותו אורך
+        max_length=${#heights_arr[@]}
+        (( ${#leaf_counts_arr[@]} > max_length )) && max_length=${#leaf_counts_arr[@]}
+        (( ${#dry_weights_arr[@]} > max_length )) && max_length=${#dry_weights_arr[@]}
+
+        while [ ${#heights_arr[@]} -lt $max_length ]; do heights_arr+=("${heights_arr[-1]}"); done
+        while [ ${#leaf_counts_arr[@]} -lt $max_length ]; do leaf_counts_arr+=("${leaf_counts_arr[-1]}"); done
+        while [ ${#dry_weights_arr[@]} -lt $max_length ]; do dry_weights_arr+=("${dry_weights_arr[-1]}"); done
+
+        height_fixed=$(IFS=" "; echo "${heights_arr[*]}")
+        leaf_count_fixed=$(IFS=" "; echo "${leaf_counts_arr[*]}")
+        dry_weight_fixed=$(IFS=" "; echo "${dry_weights_arr[*]}")
+
+        echo "$plant,\"$height_fixed\",\"$leaf_count_fixed\",\"$dry_weight_fixed\"" >> "$CSV_FILE"
+        echo "Added plant: $plant"
+    done
+
     echo "CSV file '$CSV_FILE' has been created and set as the current file."
     echo ""
 }
+
 
 choose_csv() {
     echo ""
