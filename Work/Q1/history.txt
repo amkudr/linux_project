@@ -1,0 +1,118 @@
+    1  ls
+    2  docker ps
+    3  docker images
+    4  docker exec -it b1d9df8ab815 touch test
+    5  docker exec -it alpine touch test
+    6  docker ps -a
+    7  docker exec -it b1d9df8ab815 touch test
+    8  docker exec -it 89cb57415065 touch test
+    9  ls
+   10  whoami
+   11  cd ..
+   12  ls
+   13  cd~
+   14  cd ~
+   15  ls
+   16  docker stop 89cb5741506
+   17  cd anmkudr/
+   18  mkdir -p LINUX_Course_Project/{DOWNLOADS,CODE,DATA,BACKUPS/Work/Q{1..4}}
+   19  code .
+   20  histrory
+   21  history
+   22  git checkout --
+   23  git checkout -b BR_Q2
+   24  cp ./DOWNLOADS/LINUX_COURSE_WORK-downloads/plant.py ./BACKUPS/Q2
+   25  cp ./DOWNLOADS/LINUX_COURSE_WORK-downloads/plant.py ./BACKUPS/Q2/
+   26  cp ./DOWNLOADS/LINUX_COURSE_WORK-downloads/plant.py ./Work/Q2/
+   27  python3 Work/Q2/plant.py 
+   28  mv Rose_* Work/Q2/Diagrams_1
+   29  mkdir -p Work/Q2/Diagrams_1 && mv Rose_* Work/Q2/Diagrams_1/
+   30  mv Work/Q2/Diagrams_1/* BACKUPS/
+   31  mv BACKUPS/* Work/Q2/Diagrams_1/
+   32  tar -czvf BACKUPS/diagrams_backup_$(date +"%Y-%m-%d_%H-%M-%S").tar.gz -C Diagrams_1 .
+   33  tar -czvf BACKUPS/diagrams_backup_$(date +"%Y-%m-%d_%H-%M-%S").tar.gz -C Work/Q2/Diagrams_1 .
+   34  cd ..
+   35  ls
+   36  mv LINUX_Course_Project/ LINUX_Course_Project_old/
+   37  ls
+   38  cd LINUX_Course_Project_old/
+   39  cd Li
+   40  ls
+   41  mv LINUX_Course_Project_old LINUX_Course_Project
+   42  cd LINUX_Course_Project/
+   43  mkdir -p LINUX_Course_Project/{DOWNLOADS,CODE,DATA,BACKUPS,Work/Q{1..4}}
+   44  cd anmkudr/
+   45  mkdir -p LINUX_Course_Project/{DOWNLOADS,CODE,DATA,BACKUPS,Work/Q{1..4}}
+   46  cd LINUX_Course_Project/
+   47  git init
+   48  git commit -m "first commit"
+   49  git branch -M main
+   50  git remote add origin https://github.com/amkudr/linux_project.git
+   51  git push -u origin main
+   52  git branch
+   53  git branhc
+   54  git branch 
+   55  git init
+   56  git status
+   57  wget -O downloads.tar.gz https://github.com/Telhai-Git/LINUX_COURSE_WORK/archive/refs/tags/downloads.tar.gz
+   58  tar -xzvf downloads.tar.gz -C ./DOWNLOADS
+   59  git commit -m "Added structure"
+   60  git add DOWNLOADS/
+   61  git add downloads.tar.gz 
+   62  git commit -m "Added structure"
+   63  rm downloads.tar.gz 
+   64  git checkout -b BR_Q1
+   65  mv ./DOWNLOADS/LINUX_COURSE_WORK-downloads/* ./DOWNLOADS/
+   66  rm ./DOWNLOADS/LINUX_COURSE_WORK-downloads/
+   67  rm -r ./DOWNLOADS/LINUX_COURSE_WORK-downloads/
+   68  cp ./DOWNLOADS/*.py ./CODE/
+   69  cp ./DOWNLOADS/*.{csv, jpg,txt} ./DATA
+   70  cp ./DOWNLOADS/*.{csv,jpg,txt} ./DATA
+   71  {  echo "Time : $(date)";  echo "USER DETAILS : $(grep "^$(whoami):" /etc/passwd)";  echo "REPO : $(pwd)";  echo "GithubUrl: https://github.com/amkudr/linux_project.git";  echo "VERSIONID : $(grep '^VERSION_ID=' /etc/os-release | cut -d '=' -f2 | tr -d '\"')";  echo "--------------------------------------------------";  tree;  echo "--------------------------------------------------";  find ~ -type f -name "*.sh";  } > ./Work/Q1/q1_output.txt
+   72  sudo apt  install tree 
+   73  {  echo "Time : $(date)";  echo "USER DETAILS : $(grep "^$(whoami):" /etc/passwd)";  echo "REPO : $(pwd)";  echo "GithubUrl: https://github.com/amkudr/linux_project.git";  echo "VERSIONID : $(grep '^VERSION_ID=' /etc/os-release | cut -d '=' -f2 | tr -d '\"')";  echo "--------------------------------------------------";  tree;  echo "--------------------------------------------------";  find ~ -type f -name "*.sh";  } > ./Work/Q1/q1_output.txt
+   74  { echo "Time : $(date '+%Y-%m-%d %H:%M:%S')"; echo "USER DETAILS : $(grep "^$(whoami):" /etc/passwd)"; echo "REPO : $(pwd)"; echo "GithubUrl: https://github.com/amkudr/linux_project.git"; echo "VERSIONID : $(grep '^VERSION_ID=' /etc/os-release | cut -d '=' -f2 | tr -d '\"')"; echo "--------------------------------------------------"; tree; echo "--------------------------------------------------"; find ~ -type f -name "*.sh"; } > ./Work/Q1/ q1_output.txt
+   75* { echo "Time : $(date '+%Y-%m-%d %H:%M:%S')"; echo "USER DETAILS : $(grep "^$(whoami):" /etc/passwd)"; echo "REPO : $(pwd)"; echo "GithubUrl: https://github.com/amkudr/linux_project.git"; echo "VERSIONID : $(grep '^VERSION_ID=' /etc/os-release | cut -d '=' -f2 | tr -d '\"')"; echo "-----------------------------
+   76  script -q -c '{
+echo "Time : $(date "+%Y-%m-%d %H:%M:%S")";
+echo "USER DETAILS : $(grep "^$(whoami):" /etc/passwd)";
+echo "REPO : $(pwd)";
+echo "GithubUrl: https://github.com/amkudr/linux_project.git";
+echo "VERSIONID : $(grep "^VERSION_ID=" /etc/os-release | cut -d "=" -f2 | tr -d "\"")";
+echo "--------------------------------------------------";
+tree;
+echo "--------------------------------------------------";
+find ~ -type f -name "*.sh";
+}' ./Work/Q1/q1_output.txt
+   77*  echo "Time : $(date '+%Y-%m-%d %H:%M:%S')"; echo "USER DETAILS : $(grep "^$(whoami):" /etc/passwd)"; echo "REPO : $(pwd)"; echo "GithubUrl: https://github.com/amkudr/linux_project.git"; echo "VERSIONID : $(grep '^VERSION_ID=' /etc/os-release | cut -d '=' -f2 | tr -d '\"')"; echo "--------------------------------------------------"; tree; echo "-------------------------------------------------"; find ~ -type f -name "*.sh"; } > ./Work/Q1/q1_output.txt
+   78  echo "Time : $(date '+%Y-%m-%d %H:%M:%S')"
+   79  echo "Time : $(date '+%Y-%m-%d %H:%M:%S')" >> ./Work/Q1/q1_output.txt 
+   80  echo "Time : $(date '+%Y-%m-%d %H:%M:%S')" > ./Work/Q1/q1_output.txt 
+   81  { echo "USER DETAILS : $(grep "^$(whoami):" /etc/passwd)"; echo "REPO : $(pwd)"; echo "GithubUrl: https://github.com/amkudr/linux_project.git"; echo "VERSIONID : $(grep '^VERSION_ID=' /etc/os-release | cut -d '=' -f2 | tr -d '\"')"; echo "--------------------------------------------------"; tree; echo "--------------------------------------------------"; find ~ -type f -name "*.sh"; } > ./Work/Q1/ q1_output.txt
+   82  { echo "USER DETAILS : $(grep "^$(whoami):" /etc/passwd)"; echo "REPO : $(pwd)"; echo "GithubUrl: https://github.com/amkudr/linux_project.git"; echo "VERSIONID : $(grep '^VERSION_ID=' /etc/os-release | cut -d '=' -f2 | tr -d '\"')"; echo "--------------------------------------------------"; tree; echo "--------------------------------------------------"; find ~ -type f -name "*.sh"; } > ./Work/Q1/q1_output.txt
+   83  echo "Time : $(date '+%Y-%m-%d %H:%M:%S')" > ./Work/Q1/q1_output.txt 
+   84  echo "USER DETAILS : $(grep "^$(whoami):" /etc/passwd)" > ./Work/Q1/q1_output.txt 
+   85  cd ./Work/Q1
+   86  echo "Time : $(date '+%Y-%m-%d %H:%M:%S')" > q1_output.txt 
+   87  echo "" >> q1_output.txt
+   88  echo "USER DETAILS : $(grep "^$(whoami):" /etc/passwd)" >> q1_output.txt
+   89  echo "" >> q1_output.txt
+   90  echo "REPO : $(pwd)" >> q1_output.txt
+   91  echo "" >> q1_output.txt
+   92  echo "GithubUrl: https://github.com/amkudr/linux_project.git" >> q1_output.txt
+   93  echo "" >> q1_output.txt
+   94  echo "VERSIONID : $(grep '^VERSION_ID=' /etc/os-release | cut -d '=' -f2 | tr -d '\"')" >> q1_output.txt
+   95  echo "" >> q1_output.txt
+   96  echo "--------------------------------------------------" >> q1_output.txt
+   97  tree >> q1_output.txt
+   98  cd ..
+   99  tree >> ./Work/Q1/q1_output.txt
+  100  echo "--------------------------------------------------" >> ./Work/Q1/q1_output.txt
+  101  echo "" >> ./Work/Q1/q1_output.txt
+  102  find ~ -type f -name "*.sh" >> ./Work/Q1/q1_output.txt
+  103  git add .
+  104  git commit -m "Finished Q1"
+  105  git checkout main
+  106  git merge BR_Q1
+  107  git log > git_commits.log
+  108  history > ./Work/Q1/history.txt
