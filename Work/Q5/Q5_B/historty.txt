@@ -1,0 +1,94 @@
+    1  history
+    2  git mkdir ./Work/Q5
+    3  mkdir ./Work/Q5
+    4  cd ./Work/Q5
+    5  git checkout -b BR_Q5
+    6  touch Dockerfile
+    7  echo "FROM python:3.11-slim" >> Dockerfile 
+    8  docker build -t q5image_a .
+    9  docker run -it --name q5container_a q5image_a /bin/bash
+   10  docker cp ../../CODE/plant.py q5container_a:/
+   11  docker run -it --name q5container_a q5image_a /bin/bash
+   12  docker run q5container_a 
+   13* 
+   14  docker run q5container_a 
+   15  docker start q5container_a 
+   16  docker start -ai q5container_a 
+   17  rm Rose_all_reversed.png
+   18  docker start -ai q5container_a 
+   19  docker cp q5container_a:/export ./
+   20  docker run -it --name q5container_a2 -v $(pwd)/export2:/ q5image_a /bin/bash
+   21  docker run -it --name q5container_a2 -v $(pwd)/export2:/app q5image_a /bin/bash
+   22  cd export
+   23  docker cp . q5container_a2:/app/
+   24  docker start q5container_a2
+   25  docker start -ai q5container_a2
+   26  ls
+   27  cd ../export2
+   28  ls
+   29  cd ..
+   30  history >> history.txt
+   31  mkdir Q5_A
+   32  mv * ./Q5_A
+   33  git add .
+   34  git commit -m "Finished Q5 Part A"
+   35  git checkout main
+   36  git branch
+   37  git merge BR_Q5
+   38  git push
+   39  git push origin
+   40  git push origin main
+   41  git branch
+   42  docker stop q5container_a2
+   43  git checkout BR_Q5
+   44  git branch
+   45  mkdir ~/backup_export2
+   46  mv Work/Q5/export2/* ~/backup_export2/
+   47  mv Work/Q5/export2/* ./backup_export2/
+   48  mkdir backuo
+   49  mv Work/Q5/export2/* ./backup/
+   50  mv Work/Q5/export2/* ./backuo/
+   51  mv ./export2/ ./backuo/
+   52  sudo mv ./export2/ ./backuo/
+   53  git checkout BR_Q5
+   54  mv ./backuo ../
+   55  rm -r ../backuo/
+   56  sudo rm -r ../backuo/
+   57  mv ./export2  ./Q5_A/
+   58  git commit -m "Finished Q5 Part A"
+   59  git add .
+   60  git commit -m "Finished Q5 Part A"
+   61  git checkout main
+   62  git merge BR_Q5
+   63  git push origin
+   64  git checkout BR_Q5
+   65  mkdir Q5_B
+   66  cd Q5_B
+   67  touch Dockerfile
+   68  echo "FROM python:3.11-slim" >> Dockerfile 
+   69  nano Dockerfile
+   70  cd ~
+   71  ls
+   72  cd LINUX_Course_Project/
+   73  cp ./plant_plots.py ./Work/Q5/Q5_B/
+   74  cd ./Work/Q5/Q5_B
+   75  docker build -t q5image_b
+   76  docker build -t q5image_b .
+   77  docker run q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   78  docker run q5image_b -- --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   79  docker run q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   80  docker build -t q5image_b .
+   81  docker run q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   82  cp ~/LINUX_Course_Project/requirements.txt ./
+   83  docker build -t q5image_b .
+   84  docker run q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   85  docker run -v $(pwd)/export:/app q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   86  docker run -v $(pwd)/export:/app/output q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   87  docker run -it -v $(pwd)/export:/app/output q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   88  docker build -t q5image_b .
+   89  docker run -v $(pwd)/export:/app/output q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   90  docker build -t q5image_b .
+   91  docker run -v $(pwd)/export:/app/output q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   92  docker run --rm -v $(pwd)/export:/app/output q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   93  docker run --rm -v $(pwd)/export:/app/output q5image_b --plant "Lily" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   94  history >> historty.txt
