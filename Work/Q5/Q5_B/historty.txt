@@ -74,21 +74,6 @@
    74  cd ./Work/Q5/Q5_B
    75  docker build -t q5image_b
    76  docker build -t q5image_b .
-   77  docker run q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
-   78  docker run q5image_b -- --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
-   79  docker run q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
-   80  docker build -t q5image_b .
-   81  docker run q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
-   82  cp ~/LINUX_Course_Project/requirements.txt ./
-   83  docker build -t q5image_b .
-   84  docker run q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
-   85  docker run -v $(pwd)/export:/app q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
-   86  docker run -v $(pwd)/export:/app/output q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
-   87  docker run -it -v $(pwd)/export:/app/output q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
-   88  docker build -t q5image_b .
-   89  docker run -v $(pwd)/export:/app/output q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
-   90  docker build -t q5image_b .
-   91  docker run -v $(pwd)/export:/app/output q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
    92  docker run --rm -v $(pwd)/export:/app/output q5image_b --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
    93  docker run --rm -v $(pwd)/export:/app/output q5image_b --plant "Lily" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
    94  history >> historty.txt

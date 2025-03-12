@@ -1,0 +1,27 @@
+    1  history
+    2  cd ..
+    3  mkdir Q5_C
+    4  cd Q5_C
+    5  touch Dockerfile
+    6  mkdir images
+    7  docker build -t java_watermark .
+    8  docker run --rm -v $(pwd)/images:/app/images java_watermark /app/images
+    9  docker build -t java_watermark .
+   10  docker run --rm -v $(pwd)/images:/app/images java_watermark /app/images
+   11  docker build -t java_watermark .
+   12  FROM openjdk:17-slim
+   13  # Install freetype, fontconfig, and basic fonts for Java
+   14  RUN apt-get update &&     apt-get install -y libfreetype6 fonts-dejavu-core fontconfig &&     a
+   15  docker run --rm -v $(pwd)/images:/app/images java_watermark /app/images
+   16  docker build -t java_watermark .
+   17  docker run --rm -v $(pwd)/images:/app/images java_watermark /app/images
+   18  docker build -t java_watermark .
+   19  docker run --rm -v $(pwd)/images:/app/images java_watermark /app/images
+   20  docker build -t java_watermark .
+   21  docker run --rm -v $(pwd)/images:/app/images java_watermark /app/images
+   22  cd ..
+   23  touch script.sh
+   24  chmod +x script.sh
+   25  ./script.sh --plant "Lily" --height 50 25 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   26  ./script.sh --plant "Orhid" --height 50 25 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
+   27  history >> ./Q5_C/history.txt
