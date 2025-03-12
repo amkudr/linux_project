@@ -6,6 +6,16 @@ error_log="error.log"
 script_dir="$(dirname "$(realpath "$0")")"
 python_script="$(realpath "$script_dir/../../plant_plots.py")"
 
+if [ ! -d "$script_dir/venv" ]; then
+    python3 -m venv "$script_dir/venv"
+    source "$script_dir/venv/bin/activate"
+    if [ -f "$script_dir/requirements.txt" ]; then
+        pip install -r "$script_dir/requirements.txt"
+    fi
+else
+    source "$script_dir/venv/bin/activate"
+fi
+
 csv_file=""
 plant_name=""
 
