@@ -41,7 +41,8 @@ plt.savefig(f"{plant}_histogram.png")
 plt.close()  # Close the plot to prepare for the next one
 
 # Line Plot - Plant Height Over Time
-weeks = ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5']  # Time points for the data
+#weeks = ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5']  # Time points for the data
+weeks = [f'Week {i+1}' for i in range(len(height_data))]
 plt.figure(figsize=(10, 6))
 plt.plot(weeks, height_data, marker='o', color='r')
 plt.title(f'{plant} Height Over Time')
