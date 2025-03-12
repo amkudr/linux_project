@@ -37,7 +37,6 @@ tail -n +2 "$csv_file" | while IFS=',' read -r plant heights leaf_counts dry_wei
 
     echo "processing plant: $plant" | tee -a "$log_file"
 
-    # ✅ שינוי כאן – שורת הפקודה לא תודפס, רק התוצאה
     python3 "$python_script" --plant "$plant" --height $heights --leaf_count $leaf_counts --dry_weight $dry_weights > "$plant_dir/$plant.log" 2>&1
 
     if [[ $? -ne 0 ]]; then
