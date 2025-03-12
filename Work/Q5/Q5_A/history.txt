@@ -1,0 +1,30 @@
+    1  history
+    2  git mkdir ./Work/Q5
+    3  mkdir ./Work/Q5
+    4  cd ./Work/Q5
+    5  git checkout -b BR_Q5
+    6  touch Dockerfile
+    7  echo "FROM python:3.11-slim" >> Dockerfile 
+    8  docker build -t q5image_a .
+    9  docker run -it --name q5container_a q5image_a /bin/bash
+   10  docker cp ../../CODE/plant.py q5container_a:/
+   11  docker run -it --name q5container_a q5image_a /bin/bash
+   12  docker run q5container_a 
+   13* 
+   14  docker run q5container_a 
+   15  docker start q5container_a 
+   16  docker start -ai q5container_a 
+   17  rm Rose_all_reversed.png
+   18  docker start -ai q5container_a 
+   19  docker cp q5container_a:/export ./
+   20  docker run -it --name q5container_a2 -v $(pwd)/export2:/ q5image_a /bin/bash
+   21  docker run -it --name q5container_a2 -v $(pwd)/export2:/app q5image_a /bin/bash
+   22  cd export
+   23  docker cp . q5container_a2:/app/
+   24  docker start q5container_a2
+   25  docker start -ai q5container_a2
+   26  ls
+   27  cd ../export2
+   28  ls
+   29  cd ..
+   30  history >> history.txt

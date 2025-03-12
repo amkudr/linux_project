@@ -1,0 +1,13 @@
+    1  apt-get update
+    2  apt-get install -y nano imagemagick
+    4  exit
+    5  \
+    6  pyhton3 plant.py
+    7  python3 plant.py
+    8  pip install matplotlib
+    9  python3 plant.py
+   10  history
+   11  ls
+   12  convert +append Rose* Rose_all.png
+   13  ls
+   14  history >> history.txt
