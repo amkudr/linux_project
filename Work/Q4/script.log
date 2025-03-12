@@ -1,51 +1,3 @@
-creating virtual environment
-warning no requirements.txt found, skipping dependencies installation
-processing plant: t
-height: "1 2 3" cm, leaf count: "1 2 2", dry weight: "4 4 4" g
-warning no requirements.txt found, skipping dependencies installation
-processing plant: t
-height: "1 2 3" cm, leaf count: "1 2 2", dry weight: "4 4 4" g
-warning: no requirements.txt found, skipping dependencies installation
-processing plant: Rose
-height: 50 cm, leaf count: 55, dry weight: 60 65 70 35 40 45 50 55 2.0 2.2 2.5 2.7 3.0 g
-processing plant: Tulip
-height: 30 cm, leaf count: 35, dry weight: 40 42 12 15 18 20 1.5 1.6 1.7 1.8 g
-processing plant: Sunflower
-height: 120 cm, leaf count: 125, dry weight: 130 135 50 55 60 65 5.0 5.5 6.0 6.5 g
-processing plant: Daffodil
-height: 40 cm, leaf count: 45, dry weight: 50 55 15 18 20 22 1.8 2.0 2.2 2.5 g
-processing plant: Lily
-height: 60 cm, leaf count: 65, dry weight: 70 20 22 24 2.5 2.7 3.0 g
-Using CSV file: /home/elavcoh/linux_project/Work/Q3/plants.csv
-warning: no requirements.txt found, skipping dependencies installation
-processing plant: Rose
-height: 50 55 60 65 70 cm, leaf count: 35 40 45 50 55, dry weight: 2.0 2.2 2.5 2.7 3.0 g
-processing plant: Tulip
-height: 30 35 40 42 cm, leaf count: 12 15 18 20, dry weight: 1.5 1.6 1.7 1.8 g
-processing plant: Sunflower
-height: 120 125 130 135 cm, leaf count: 50 55 60 65, dry weight: 5.0 5.5 6.0 6.5 g
-processing plant: Daffodil
-height: 40 45 50 55 cm, leaf count: 15 18 20 22, dry weight: 1.8 2.0 2.2 2.5 g
-processing plant: Lily
-height: 60 65 70 cm, leaf count: 20 22 24, dry weight: 2.5 2.7 3.0 g
-Using CSV file: /home/elavcoh/linux_project/Work/Q3/plants.csv
-warning: no requirements.txt found, skipping dependencies installation
-Using CSV file: /home/elavcoh/linux_project/Work/Q3/plants.csv
-processing plant: Rose
-height: 50 55 60 65 70 cm, leaf count: 35 40 45 50 55, dry weight: 2.0 2.2 2.5 2.7 3.0 g
-running command: python3 "/home/elavcoh/linux_project/plant_plots.py" --plant "Rose" --height 50 55 60 65 70 --leaf_count 35 40 45 50 55 --dry_weight 2.0 2.2 2.5 2.7 3.0
-processing plant: Tulip
-height: 30 35 40 42 cm, leaf count: 12 15 18 20, dry weight: 1.5 1.6 1.7 1.8 g
-running command: python3 "/home/elavcoh/linux_project/plant_plots.py" --plant "Tulip" --height 30 35 40 42 --leaf_count 12 15 18 20 --dry_weight 1.5 1.6 1.7 1.8
-processing plant: Sunflower
-height: 120 125 130 135 cm, leaf count: 50 55 60 65, dry weight: 5.0 5.5 6.0 6.5 g
-running command: python3 "/home/elavcoh/linux_project/plant_plots.py" --plant "Sunflower" --height 120 125 130 135 --leaf_count 50 55 60 65 --dry_weight 5.0 5.5 6.0 6.5
-processing plant: Daffodil
-height: 40 45 50 55 cm, leaf count: 15 18 20 22, dry weight: 1.8 2.0 2.2 2.5 g
-running command: python3 "/home/elavcoh/linux_project/plant_plots.py" --plant "Daffodil" --height 40 45 50 55 --leaf_count 15 18 20 22 --dry_weight 1.8 2.0 2.2 2.5
-processing plant: Lily
-height: 60 65 70 cm, leaf count: 20 22 24, dry weight: 2.5 2.7 3.0 g
-running command: python3 "/home/elavcoh/linux_project/plant_plots.py" --plant "Lily" --height 60 65 70 --leaf_count 20 22 24 --dry_weight 2.5 2.7 3.0
 Using CSV file: /home/elavcoh/linux_project/Work/Q3/plants.csv
 processing plant: Rose
 Generated plots for Rose
@@ -57,3 +9,45 @@ processing plant: Daffodil
 Generated plots for Daffodil
 processing plant: Lily
 Generated plots for Lily
+Using CSV file: /home/elavcoh/linux_project/Work/Q3/plants.csv
+processing plant: Rose
+Generated plots for Rose
+processing plant: Tulip
+Generated plots for Tulip
+processing plant: Sunflower
+Generated plots for Sunflower
+processing plant: Daffodil
+Generated plots for Daffodil
+processing plant: Lily
+Generated plots for Lily
+Using CSV file: /home/elavcoh/linux_project/Work/Q3/plants.csv
+processing plant: Rose
+Generated plots for Rose
+processing plant: Tulip
+Generated plots for Tulip
+processing plant: Sunflower
+Generated plots for Sunflower
+processing plant: Daffodil
+Generated plots for Daffodil
+processing plant: Lily
+Generated plots for Lily
+Using CSV file: /home/elavcoh/linux_project/Work/Q3/plants.csv
+processing plant: Rose
+Generated plots for Rose
+Using CSV file: /home/elavcoh/linux_project/Work/Q3/plants.csv
+processing plant: Rose
+Generated plots for Rose
+Using CSV file: /home/elavcoh/linux_project/Work/Q3/plants.csv
+processing plant: Rose
+Generated plots for Rose
+processing plant: Tulip
+Generated plots for Tulip
+processing plant: Sunflower
+Generated plots for Sunflower
+processing plant: Daffodil
+Generated plots for Daffodil
+processing plant: Lily
+Generated plots for Lily
+Using CSV file: /home/elavcoh/linux_project/Work/Q3/plants.csv
+processing plant: Rose
+Generated plots for Rose

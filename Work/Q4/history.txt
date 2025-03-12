@@ -1,0 +1,67 @@
+ 1  history
+    2  mkdir -p ~/LINUX_Course_Project/{DOWNLOADS,CODE,DATA,BACKUPS,Work}
+    3  mkdir -p ~/LINUX_Course_Project/Work/{Q1,Q2,Q3,Q4}
+    4  cd ~/LINUX_Course_Project
+    5  git init
+    6  code .
+    7  git remote remove origin 2>/dev/null
+    8  git remote add origin https://github.com/elavcoh/LINUX_Course_Project.git
+    9  git remote -v
+   10  wget -P ~/LINUX_Course_Project/DOWNLOADS https://github.com/Telhai-Git/LINUX_COURSE_WORK/archive/refs/tags/downloads.tar.gz
+   11  tar --strip-components=1 -xzvf ~/LINUX_Course_Project/DOWNLOADS/downloads.tar.gz -C ~/LINUX_Course_Project/DOWNLOADS
+   12  git add .
+   13  git commit -m "Initial commit - Added project structure and downloaded files"
+   14  git config --global user.name "elavcoh"
+   15  git config --global user.email "elavcohen7@gmail.com"
+   16  git add .
+   17  git commit -m "Initial commit - Added project structure and downloaded files"
+   18  git log --oneline
+   19  rm ~/LINUX_Course_Project/DOWNLOADS/downloads.tar.gz
+   20  git branch BR_Q1
+   21  git checkout BR_Q1
+   22  git branch
+   23  mv ~/LINUX_Course_Project/DOWNLOADS/*.{c,py,sh} ~/LINUX_Course_Project/CODE/ 2>/dev/null
+   24  git status
+   25  git add .
+   26  git status
+   27  git commit -m "move code files to CODE and removed downloads.tar.gz"
+   28  git log --oneline --all --graph --decorate
+   29  git checkout main
+   30  git checkout master
+   31  git push -u origin master
+   32  git checkout BR_Q1
+   33  git push -u origin BR_Q1
+   34  git checkout master
+   35  git branch -M main
+   36  git push -u origin main
+   37  git push origin --delete master 2>/dev/null
+   38  git branch
+   39  touch ~/LINUX_Course_Project/Work/Q1/q1_output.txt
+   40  touch ~/LINUX_Course_Project/Work/Q1/script.sh
+   41  chmod +x ~/LINUX_Course_Project/Work/Q1/script.sh
+   42  nano ~/LINUX_Course_Project/Work/Q1/script.sh
+   43  git checkout main
+   44  git pull origin main
+   45  ls
+   46  cd ..
+   47  ls
+   48  rm -rf linux_project
+   49  rm -rf LINUX_COURSE_PROJECT
+   50  history
+   51  code .
+   52  ./bashscript.sh /home/elavcoh/linux_project/Work/Q3/plants.csv
+   53  ls -l ~/linux_project/Work/Q4/
+   54  cd ~/linux_project/Work/Q4/
+   55  ./bashscript.sh /home/elavcoh/linux_project/Work/Q3/plants.csv
+   56  cat non_existent_file
+   57  ./bashscript.sh /home/elavcoh/linux_project/Work/Q3/non_existent.csv
+   58  clear
+   59  ./bashscript.sh /home/elavcoh/linux_project/Work/Q3/plants.csv
+   60  ./bashscript.sh /home/elavcoh/linux_project/Work/Q3/non_existent.csv
+   61  ./bashscript.sh -p /home/user/plants.csv
+   62  ./bashscript.sh -p /home/elavcoh/linux_project/Work/Q3/plants.csv
+   63  ./bashscript.sh -p /home/elavcoh/linux_project/Work/Q3/plants.csv --plant Rose
+   64  clear
+   65  ./bashscript.sh -p /home/elavcoh/linux_project/Work/Q3/plants.csv
+   66  ./bashscript.sh -p /home/elavcoh/linux_project/Work/Q3/plants.csv --plant Rose
+   67  history
